@@ -1,4 +1,6 @@
 def test_updating_storage(account, flash_loan_arbitrage):
+    txn = flash_loan_arbitrage.store(0, {"from": account})
+    txn.wait(1)
     assert flash_loan_arbitrage.retrieve() == 0
 
     new_value = 15

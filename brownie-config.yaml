@@ -1,3 +1,14 @@
 dotenv: .env
 wallets:
   from_key: ${PRIVATE_KEY}
+networks:
+  default: development
+  polygon-main:
+#    verify: True
+    verify: False
+  polygon-test:
+    verify: True
+  polygon-main-fork:
+    verify: False
+  development:
+    verify: False
